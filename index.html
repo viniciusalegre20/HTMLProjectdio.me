@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Inicial</title>
+    <style>
+    </style>
+</head>
+<body>
+    <font face="Arial">
+    <h1 align="center">HTML - Conceitos básicos</h1>
+    <hr>
+    <h2>Índice</h2>
+    <ul>
+        <li><a href="#ferramentas">Ferramentas utilizadas</a></li>
+        <li><a href="#inspetor-de-elemetos">Inspetor de elementos</a></li>
+        <li><a href="#estrutura-basica">Estrutura básica HTML</a></li>
+        <li><a href="#tags">Tags</a></li>
+        <li><a href="#textos">Textos</a></li>
+        <li><a href="#listas-ordenadas">Listas ordenadas e não ordenadas</a></li>
+        <li><a href="#links">Links</a></li>
+        <li><a href="#complemento">Videos complementares</a></li>
+    </ul>
+    <hr>
+    <center>    
+    <h2 id="ferramentas"align="center">Ferramentas utilizadas </h2>
+    <p>As ferramentas utilizadas para produção de um código em HTML podem ser desde um editor de texto qualquer,
+        como notepad do próprio windows, até uma IDE mais completa, como o <a href="https://code.visualstudio.com/" target="_blank" >VisualStudioCode</a>,
+        em que podem ser instaladas diversas extenções para aprimorar a forma em que a construção do código é feita.
+    </p>
+    <a href="https://code.visualstudio.com/" target="_blank"><img src="imgs/vscode.png" alt="VS-Code" width="100" title="VisualStudioCode"></a>
+    <p>Algumas das extenções que foram usadas para a criação deste site foram:
+        <ul>
+            <li><a href="https://docs.emmet.io/" target="_blank">Emmet</a>- Função de preenchimento automático das sintaxes</li>
+            <li><a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer" target="_blank">Live server</a>- Atualização automática da página que está sendo modificada</li>
+        </ul>
+    </p>
+    <hr>
+    <h2 id="inspetor-de-elemetos" align="center">Inspetor de Elementos - Browser</h2>
+    <p>
+        O inspetor de elementos de um browser é utilizado para inspecionar uma página e observar como essa página foi idealizada e criada,
+        podendo assim visualizar a forma utilizada para a criação da mesma.
+        Para utilizar essa ferramenta, existem 2 métodos diferentes, apertando a tecla F12 do teclado, ou clicando com o botão direito
+        no corpo do site e selecionando a opção inspecionar.
+    </p>
+    <br>
+    <p>
+        Após abrir o inspetor de elementos, uma nova aba dentro do navegador irá aparecer, como podemos observar:
+    </p>
+    <br>
+    <img src="imgs/elements-browser.png" alt="eleents-browser" width="500" title="Aba Elements do Browser">
+    <p>
+        Nele obtemos diversas informações. Toda a estrutura feita dentro do site, estando na aba <b><i>"Elements"</i></b>
+        podendo ser visto os códigos em HTML e em CSS.
+    <hr>
+    <br>
+        Na próxima aba, vemos o <b><i>Console</i></b> do nosso navegador, local onde aparecem os retornos da página, em que também podem ser executados
+        códigos em JavaScript para manejo da mesma.
+    </p>
+    <img src="imgs/console-browser.png" alt="console-browser" width="500" title="Console do Browser">
+    <hr>
+    <p>
+        A aba seguinte temos o campo <b><i>Source</i></b>, em que podemos observar os arquivos upados no servidor que o site está hospedado
+        podendo ter uma maior visão do manejo dos arquivos criados no momento da idealização e realização do website.
+    </p>
+    <img src="imgs/sources-browser.png" alt="sources-browser" width="500" title="Source Browser">
+    <hr>
+    <p>
+        Na aba <b><i>Network</i></b>, temos uma janela em que nos informa o tempo de troca de informações com o servidor.
+    </p>
+    <img src="imgs/network-browser.png" alt="network-browser" width="500" title="Network Browser">
+    <hr>
+    <h2 id="estrutura-basica">Estrutura Básica do HTML - <small>Onde tudo se organiza</small></h2>
+    <p>
+        Sendo elas sempre iniciadas utilizando a abertura do simbolo menor (&lt) e o simbolo maior (&gt) para o fechamento das estruturas.
+        Nem sempre essas estruturas precisam do fechamento das suas tags, caso precisem utilizaremos do seguinte modo: &lt/&gt
+        <br>
+        O HTML tem sua estrutura baseada em 3 partes.
+        <ul>
+            <li>Identificação</li>
+            <li>Metadados</li>
+            <li>Corpo da página</li>
+        </ul>
+        <hr>
+        <br>
+        A estrutura de <b>identificação</b> é o local onde o browser irá identificar o início da linguagem escolhida.
+        <br>
+        No nosso caso utilizamos a sintaxe:
+        <h3>&lthtml&gt &lt/html&gt</h3> 
+        Essas duas tags, de início e fechamento estarão no começo e no final do nosso código.
+        <br><br>
+        <br>
+        A estrutura de metadados é uma área selecionada para que o browser processe informações que não apareceram no corpo da página.
+        <br>
+        Sendo assim, tudo que será colocado no escopo de metadados o usuário não conseguirá ver em sua tela
+        e são utilizados para modificarem a página por completo.
+        <br>
+        Sua sintaxe consiste na seguinte forma:
+        <br>
+        <h3>&lthead&gt &lt/head&gt</h3>
+        <br>
+        No head é definido diversos tipos de função, podendo alterar o estilo da página, formatação, etc.
+        Alguns exemplos são:
+        <br> <br>
+        <b>&ltmeta charset="UTF-8"&gt</b> - Definição da cadeia de caracteres disponíveis para utilização dentro da página.
+        <br> <br>
+        <b>&ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt</b> - Responsividade da página dependendo do dispositivo utilizado, se adaptando a resolução do aparelho.
+        <br> <br>
+        <b>&lttitle&gt &lt/title&gt</b> - Mudança to título inicial da página.
+        <br> <br>
+        <br>
+        O corpo da página é definido completamente dentro da tag &ltbody&gt, tudo o que o usuário vê em sua tela, será colocado dentro dela.
+        <br>
+        Assim teremos a seguinte sintaxe:
+        <br>
+        <h3><b>&ltbody&gt &lt/body&gt</b></h3>
+        Nesta parte do código serão inseridas tags de texto e de estruturamento, para definir diferenças entre parágrafos,
+        cabeçalhos, imagens, links e etc.
+        <br>
+        <br>
+        Exemplo de estrutura básica:
+        <br>
+        <img src="imgs/estruturabásica-html.png" alt="estruturaHTML" title="Estrutura básica HTML" width="450">
+        </p>
+        <hr>
+        <h2 id="tags">Tags <small>- Identificadores</small></h2>
+        <p>
+            São nada mais que os identificadores das funções de cada linha de código, que servem para caracterizar
+            cada linha do website.
+            <br>
+            Aqui temos algumas dessas tags:
+            <table border="1">
+                <tr>
+                    <thead>
+                    <th>Tags</th>
+                    <th>Função</th>
+                    </thead>
+                </tr>
+                <tr>
+                    <td>DOCTYPE</td>
+                    <td>Define o tipo de documento</td>
+                </tr>
+                <tr>
+                    <td>html</td>
+                    <td>Define o início do documento html</td>
+                </tr>
+                <tr>
+                    <td>head</td>
+                    <td>Cabeçalho onde ficam os metadados do documento</td>
+                </tr>
+                <tr>
+                    <td>title</td>
+                    <td>Define o título do documento</td>
+                </tr>
+                <tr>
+                    <td>style</td>
+                    <td>Utilizada para colocar um código css na página</td>
+                </tr>
+                <tr>
+                    <td>h1 a h6</td>
+                    <td>Define 6 niveis diferentes de cabeçalhos</td>
+                </tr>
+                <tr>
+                    <td>p</td>
+                    <td>Define um parágrafo</td>
+                </tr>
+                <tr>
+                    <td>br</td>
+                    <td>Define uma quebra de linha</td>
+                </tr>
+                <tr>
+                    <td>ul</td>
+                    <td>Define uma lista não ordenada</td>
+                </tr>
+                <tr>
+                    <td>ol</td>
+                    <td>Define uma lista ordenada</td>
+                </tr>
+                <tr>
+                    <td>li</td>
+                    <td>Define uma nova linha nas listas ordenadas e não ordenadas</td>
+                </tr>
+                <tr>
+                    <td>a</td>
+                    <td>Define um link</td>
+                </tr>
+                <tr>
+                    <td>img</td>
+                    <td>Define uma imagem</td>
+                </tr>
+                <tr>
+                    <td>strong</td>
+                    <td>Deixa a palavra em <strong>negrito</strong></td>
+                </tr>
+            </table> <br> <br>
+            A seguir, podemos ver um exemplo de uso das tags e estruturação do código
+            <br>
+        </p>
+        <img src="imgs/código-html.png" alt="código HTML" title="Código em HTML" width="450"> <br>
+        <a href="vejavcmesmo/tags.html" target="_blank">Veja você mesmo!</a>
+        <br> <hr>
+        <h2 id="textos">Textos</h2>
+        <p>
+            Tudo o que se é lido dentro da página é definido por tags textuais, onde podemos definir parágrafos,
+            cabeçalhos de diferentes tamanhos, quebras de linhas e etc.
+            <br> <br>
+            Os cabeçalhos podem ser definidos em diferentes tamanhos, são eles que darão a margem de início para nossa síntese
+            textual dentro da nossa página, definidos de 1 até 6, com seu prefixo <strong>"h"</strong> <br> <br>
+            Exemplo de código: <br> <br>
+            <img src="imgs/cabeçalhos-html.png" alt="cabeçalhos-html" title="Cabeçalhos HTML" width="250">
+            <br>
+            <a href="vejavcmesmo/cabeçalhos.html" target="_blank">Veja você mesmo!</a>
+            <br> <br>
+            Os parágrafos podem ser definidos utilizando a tag &ltp&gt, onde você pode escrever um novo parágrafo.
+            <br> <br>
+            Também temos o &ltblocknote&gt onde é definida uma citação, dando uma margem de início ao texto citado. <br>    
+            <a href="vejavcmesmo/blocknote.html" target="_blank">Veja você mesmo!</a>
+            <hr>
+        </p>
+        <h2 id="listas-ordenadas">Listas ordenadas e não ordenadas.</h2>
+        <p>
+            São com elas que conseguimos fazer listas, que podem ou não ser numeradas a cada item citado.
+            <br><br>
+            Para a utilização delas, utilizamos a tag &ltul&gt para listas não ordenadas, e a tag &ltol&gt para listas ordenadas.
+            <br><br>
+            Para criarmos novos itens dentro das listas, utilizamos a tag &ltli&gt e com isso podemos dar vida a estas listas.
+            <br>
+            <a href="vejavcmesmo/listasordenadas.html" target="_blank">Veja você mesmo!</a>
+        </p>
+        <hr>
+        <h2 id="links">Links</h2>
+        <p> 
+            Para a criação dos hyperlinks utlizamos a nomenclatura &lta&gt, e é com ela que conseguimos redirecionar o usuário até outro site,
+            ou até mesmo para o nosso próprio site, porém em outra página totalmente diferente da anterior.
+            <br>
+            A sintaxe é um pouco mais complexa das vistas anteriormente.Sendo ela da seguinte forma:
+            <br>
+            <br>
+            &lta href="link do website"&gt"texto que irá redirecionar a outra página"&lt/a&gt
+            <br>
+            Os links não necessáriamente precisam estar em uma texto para que redirecione o usuário a outa página,
+            tabém é possivel utilizar uma imagem.
+            <br>
+            Exemplo:
+            <br> <br>
+            &lta href="google.com"&gt&ltimg src="google.png" alt="google"&gt&lt/a&gt
+            <br><br>
+            Com essas informações que vimos anteriormente, ao clicar em um link,seremosS redirecionados a outra página,
+            mas sem entrar em outra janela do navegador. O que podemos fazer para que isso não ocorra ?
+            <br>
+            Para evitar isso utilizamos o atributo <strong>target="_blank"</strong>, assim o browser abrirá uma nova janela no navegador.
+            Exemplo: <br><br>
+            &lta href="google.com" target="_blank"&gt&ltimg src="google.pnc" alt="google"&gt&lt/a&gt
+        </p>
+        <hr>
+        <h2 id="complemento">Vídeos Complementares</h2>
+        <p>
+            Gostaria de citar alguns vídeos de alguns conteúdos indispensáveis quando se pensa em começar a estudar HTML.
+            <br> <br>
+            <a href="https://www.youtube.com/watch?v=3oSIqIqzN3M" target="_blank">5 MINUTOS DE HTML PARA INICIAR EM PROGRAMAÇÃO! - Rafaella Ballerini</a> <br>
+            <a href="https://www.youtube.com/watch?v=-Q-pOaw9whE" target="_blank">HTML 5 - trabalhando com Meta Tags em HTML - Retaforando</a><br>  
+            <a href="https://www.youtube.com/watch?v=_m6tuyy58Ek" target="_blank">HTML 5 - Trabalhando com Listas em HTML - Retaforando</a>
+            <a href="https://www.youtube.com/watch?v=FhedwpmefOw" target="_blank">APRENDA AS PRINCIPAIS TAGS HTML PRA ESCREVER TEXTOS NA PRÁTICA - Rodolfo Mori</a> <br>
+            <a href="https://www.youtube.com/watch?v=0Od2lhHGM-Q" target="_blank">Criar Link em HTML - Me ajuda aqui</a> <br>
+        </p>
+
+    </center>
+</font>
+</body>
+</html>
